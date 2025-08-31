@@ -1,0 +1,25 @@
+# Ignore swap and temp files
+*.swp
+*.swo
+*~
+*.tmp
+*.log
+
+# Ignore core dumps
+core
+*.core
+
+# Ignore VM images
+*.iso
+*.vdi
+*.vmdk
+*.qcow2
+*.ova
+
+# Ignore system metadata
+Thumbs.db
+.DS_Store
+
+# Ignore editor/IDE settings
+.vscode/
+.idea/
