@@ -2,9 +2,10 @@
 This project demonstrates how to apply DISA STIGs to RHEL9 systems using OpenSCAP and STIG Viewer. The goal is to demonstrate compliance scanning, remediation, and validation.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Phase 1: Manual STIG Application and Validation
+### Phase 1: Manual STIG Application and Validation
 
 First I validated compliance manually by running:
+
 sudo /usr/lib/systemd/systemd-sysctl -- cat-config | grep net.ipv4
 
 This command returned the following non-compliant values on my host system (adminwks):
