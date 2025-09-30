@@ -17,11 +17,11 @@ To correct the values I went to tenable and looked up the STIG ID for the three 
 sudo vim /etc/sysctl.d/stig-ipv4.conf
 
 Inside the file:
-# RHEL-09-253050: Enable reverse path filtering on IPv4 interfaces by default
+### RHEL-09-253050: Enable reverse path filtering on IPv4 interfaces by default
 net.ipv4.conf.default.rp_filter = 1
-# RHEL-09-253035: Enable reverse path filtering on all IPv4 interfaces
+### RHEL-09-253035: Enable reverse path filtering on all IPv4 interfaces
 net.ipv4.conf.all.rp_filter = 1
-# RHEL-09-253045: Configure RHEL 9 to not forward IPv4 source-routed packets by default
+### RHEL-09-253045: Configure RHEL 9 to not forward IPv4 source-routed packets by default
 net.ipv4.conf.default.accept_source_route = 0
 
 Applying the settings:
