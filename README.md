@@ -42,3 +42,5 @@ Applying the settings:
 **sudo sysctl --system**
 
 Please see the following screenshots here: To see the results of the commands. The STIGs were succesfully applied.
+
+## Phase 2: STIG Automation with Ansible Playbooks
