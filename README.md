@@ -20,9 +20,9 @@ First I validated compliance manually by running:
 **sudo /usr/lib/systemd/systemd-sysctl -- cat-config | grep net.ipv4**
 
 This command returned the following non-compliant values on my host system (adminwks):
-- net.ipv4.conf.default.rp_filter = 2 (should be "1" according to tenable)
-- net.ipv4.conf .*. rp_filter = 2 (should be "1" according to tenable)
-- net.ipv4.conf.default.accept_source_route = 1 (should be "0" according to tenable)
+- **net.ipv4.conf.default.rp_filter = 2** (should be "1" according to tenable)
+- **net.ipv4.conf .*. rp_filter = 2** (should be "1" according to tenable)
+- **net.ipv4.conf.default.accept_source_route = 1** (should be "0" according to tenable)
 
 ### Manual Remediation
 To correct the values I went to tenable and looked up the STIG ID for the three entries. Then I created the following file with the correct changes:
