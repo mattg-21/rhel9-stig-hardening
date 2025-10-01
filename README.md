@@ -16,6 +16,7 @@ This project demonstrates how to apply DISA STIGs to RHEL9 systems using OpenSCA
 ## Phase 1: Manual STIG Application and Validation
 
 First I validated compliance manually by running:
+
 **sudo /usr/lib/systemd/systemd-sysctl -- cat-config | grep net.ipv4**
 
 This command returned the following non-compliant values on my host system (adminwks):
@@ -25,6 +26,7 @@ This command returned the following non-compliant values on my host system (admi
 
 ### Manual Remediation
 To correct the values I went to tenable and looked up the STIG ID for the three entries. Then I created the following file with the correct changes:
+
 **sudo vim /etc/sysctl.d/stig-ipv4.conf**
 
 Inside the file:
@@ -36,6 +38,7 @@ net.ipv4.conf.all.rp_filter = 1
 net.ipv4.conf.default.accept_source_route = 0
 
 Applying the settings:
-sudo sysctl --system
+
+**sudo sysctl --system**
 
 Please see the following screenshots here: To see the results of the commands. The STIGs were succesfully applied.
